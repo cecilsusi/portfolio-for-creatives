@@ -140,8 +140,8 @@
   --color-link-hover: #e3e3ea;
   --color-link-visited: #e3e3ea;
   /* Navigation */
-  --color-nav-link: #5200ff;
-  --color-nav-link-hover: #321575;
+  --color-nav-link: #e3e3ea;
+  --color-nav-link-hover: #02182b;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
@@ -630,6 +630,8 @@ a:active {
 /* -------------------------------------------------------------------------- */
 
 a.nav-link-primary {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
   color: var(--color-nav-link);
 }
 a.nav-link-primary:hover {
@@ -690,6 +692,8 @@ a.nav-link-primary:hover {
   min-height: 80vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
@@ -1458,7 +1462,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 10rem;
+    width: 20rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1470,7 +1474,7 @@ to keep your styles reusable and consistent.
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 90vh;
   }
 
   .hero-headline-wrapper {
