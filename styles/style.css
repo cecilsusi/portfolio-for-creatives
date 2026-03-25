@@ -117,17 +117,17 @@
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #02182b;
-  --color-bg-about: #02182b;
-  --color-bg-footer: #02182b;
+  --color-bg: #021819;
+  --color-bg-about: #021819;
+  --color-bg-footer: #021819;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
-  --h1-color: #d7263d;
-  --h2-color: #d7263d;
-  --h3-color: #d7263d;
-  --h4-color: #d7263d;
-  --h5-color: #d7263d;
-  --h6-color: #d7263d;
+  --h1-color: #f71e4c;
+  --h2-color: #f71e4c;
+  --h3-color: #f71e4c;
+  --h4-color: #f71e4c;
+  --h5-color: #f71e4c;
+  --h6-color: #f71e4c;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
@@ -136,12 +136,12 @@
   --color-text-project-title: #5200ff;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
-  --color-link: #d7263d;
+  --color-link: #f71e4c;
   --color-link-hover: #e3e3ea;
   --color-link-visited: #e3e3ea;
   /* Navigation */
   --color-nav-link: #e3e3ea;
-  --color-nav-link-hover: #02182b;
+  --color-nav-link-hover: #021819;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
@@ -211,8 +211,8 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor:
-    url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  /* cursor:
+    url("../assets/temp/up-cursor.png"), auto !important; Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -528,7 +528,7 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary); /* Uses your brand's dominant color */
+  color: var(--color-accent-primary);
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
@@ -1462,7 +1462,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 20rem;
+    width: 6rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
