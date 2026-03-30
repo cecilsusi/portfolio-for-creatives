@@ -112,15 +112,15 @@
   --color-text-primary: #e3e3ea;
   --color-text-secondary: #333;
   --color-accent-primary: #f8f4ff;
-  --color-accent-secondary: #ff057c;
+  --color-accent-secondary: #f71e4c;
   --color-overlay-primary: rgba(215, 38, 61, 0.5);
-  --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+  --color-highlight: #f71e4c;
+  --color-fallback: #f71e4c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
   --color-bg: #021819;
   --color-bg-about: #021819;
   --color-bg-footer: #021819;
-  --color-bg-holding-page: rgba(82, 0, 255, 0.6);
+  --color-bg-holding-page: #021819;
   /* Headings */
   --h1-color: #f71e4c;
   --h2-color: #f71e4c;
@@ -129,21 +129,20 @@
   --h5-color: #f71e4c;
   --h6-color: #f71e4c;
   /* Special Text Colours */
-  --color-text-holding-title: #ebedf0;
+  --color-text-holding-title: #f71e4c;
   --color-text-project-category: #ffffff;
   --color-text-project-description: #222;
   --color-text-project-sidebar: #222;
-  --color-text-project-title: #5200ff;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
   --color-link: #f71e4c;
   --color-link-hover: #e3e3ea;
-  --color-link-visited: #e3e3ea;
+  --color-link-visited: #f71e4c;
   /* Navigation */
   --color-nav-link: #e3e3ea;
   --color-nav-link-hover: #021819;
-  --color-nav-arrow: #5200ff;
-  --color-nav-arrow-hover: #000;
+  --color-nav-arrow: #f71e4c;
+  --color-nav-arrow-hover: #e3e3ea;
   --color-nav-arrow-stroke: #5200ff;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
@@ -538,7 +537,7 @@ sup {
 .project-title {
   font-size: 3.625rem;
   font-family: var(--font-family-project-title);
-  color: var(--color-text-project-title);
+  color: var(--h1-color);
   margin-bottom: 1rem;
 }
 
@@ -546,7 +545,7 @@ sup {
 .project-description {
   font-size: 1.225rem;
   line-height: 1.2;
-  color: var(--color-text-project-description);
+  color: var(--color-text-primary);
   margin-bottom: 1rem;
 }
 
@@ -600,12 +599,14 @@ sup {
 /* Unvisited link */
 a:link {
   color: var(--color-link);
+  font-weight: bold;
   text-decoration: none; /* Removes underline */
 }
 
 /* Visited link — after a user clicks and returns */
 a:visited {
   color: var(--color-link-visited);
+  text-decoration: wavy;
 }
 
 /* Hover — when a user hovers their mouse over the link */
@@ -1162,9 +1163,9 @@ a.nav-link-primary:hover {
 .project-description-container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  background: var(--color-bg-project-description);
+  background: var(--color-bg);
   padding: var(--padding-small);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
@@ -1197,7 +1198,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: row;
   flex: 1;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -1423,7 +1424,7 @@ to keep your styles reusable and consistent.
 
   .h1-full-width,
   .h2-full-width {
-    width: 70%;
+    width: 100%;
     padding: var(--padding-small);
   }
 
@@ -1536,12 +1537,12 @@ to keep your styles reusable and consistent.
   /* Sidebar on Large Devices */
 
   .project-aside {
-    width: 35%;
+    width: 25%;
     height: 80vh;
     position: -webkit-sticky;
     position: sticky;
     top: 8rem;
-    padding-right: 2rem;
+    padding-right: 0.5rem;
   }
 
   /* Main Project Image Area on Large Devices */
