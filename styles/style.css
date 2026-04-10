@@ -35,6 +35,15 @@
 /* Sekuya Font (possibly for headers or special text) */
 @import url("https://fonts.googleapis.com/css2?family=Sekuya&display=swap");
 
+/* Climate Crisis Font (possibly for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap");
+
+/* Changa One Font (possibly for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap");
+
+/* Georama Font (body text) */
+@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Rubik Font (clean and modern for body text) */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
 
@@ -105,9 +114,9 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Rubik", sans-serif;
-  --font-family-heading: "Sekuya", sans-serif;
-  --font-family-project-title: "Sekuya", sans-serif;
+  --font-family-body: "Georama", sans-serif;
+  --font-family-heading: "Climate Crisis", sans-serif;
+  --font-family-project-title: "Climate Crisis", sans-serif;
   /* Core Colours */
   --color-text-primary: #e3e3ea;
   --color-text-secondary: #333;
@@ -130,17 +139,17 @@
   --h6-color: #f71e4c;
   /* Special Text Colours */
   --color-text-holding-title: #f71e4c;
-  --color-text-project-category: #ffffff;
+  --color-text-project-category: #e3e3ea;
   --color-text-project-description: #222;
   --color-text-project-sidebar: #222;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-work-grid-title: #e3e3ea;
   /* Link States */
   --color-link: #f71e4c;
   --color-link-hover: #e3e3ea;
   --color-link-visited: #f71e4c;
   /* Navigation */
-  --color-nav-link: #e3e3ea;
-  --color-nav-link-hover: #021819;
+  --color-nav-link: #f71e4c;
+  --color-nav-link-hover: #e3e3ea;
   --color-nav-arrow: #f71e4c;
   --color-nav-arrow-hover: #e3e3ea;
   --color-nav-arrow-stroke: #5200ff;
@@ -527,7 +536,8 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary);
+  color: var(--color-bg);
+  letter-spacing: 0.05rem;
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
@@ -570,7 +580,8 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.05rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
 }
@@ -633,10 +644,18 @@ a:active {
 a.nav-link-primary {
   font-family: var(--font-family-heading);
   font-size: 1.5rem;
+  letter-spacing: 0.05rem;
   color: var(--color-nav-link);
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
+}
+
+a.dark {
+  color: var(--color-bg);
+}
+a.dark:hover {
+  color: var(--color-accent-primary);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -693,8 +712,6 @@ a.nav-link-primary:hover {
   min-height: 80vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
-  padding-left: var(--padding-medium);
-  padding-right: var(--padding-medium);
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
@@ -702,6 +719,7 @@ a.nav-link-primary:hover {
 
 .nav-branding {
   display: flex;
+  background-color: var(--color-bg);
   flex-direction: column;
   justify-content: space-between;
   padding: var(--padding-small);
@@ -717,8 +735,8 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
-  width: 3rem;
-  /* TODO: Adjust the width of the logo on mobile devices here */
+  width: 5rem;
+  fill: var(--color-accent-secondary);
 }
 
 .hero-headline-wrapper {
@@ -1463,19 +1481,19 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 6rem;
+    width: 10rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
   .susi-logo {
-    fill: white;
+    fill: var(--color-accent-secondary);
   }
   .susi-logo:hover {
-    fill: black;
+    fill: var(--color-accent-primary);
   }
 
   .hero {
-    min-height: 90vh;
+    min-height: 100vh;
   }
 
   .hero-headline-wrapper {
@@ -1498,7 +1516,7 @@ to keep your styles reusable and consistent.
   /* Work Page Grid for Large Devices */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-gap: 1rem;
   }
 
