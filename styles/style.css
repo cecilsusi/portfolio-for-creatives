@@ -29,28 +29,11 @@
 /* You can add your own fonts here, but be mindful of performance */
 /* ------------------------------- */
 
-/* Bungee Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-
-/* Sekuya Font (possibly for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Sekuya&display=swap");
-
 /* Climate Crisis Font (possibly for headers or special text) */
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap");
 
-/* Changa One Font (possibly for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap");
-
 /* Georama Font (body text) */
 @import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap");
-
-/* Rubik Font (clean and modern for body text) */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
-
-/* Inter Font (great for readability and minimal design) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/*
 
 /* 
 ██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
@@ -219,8 +202,8 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  /* cursor:
-    url("../assets/temp/up-cursor.png"), auto !important; Custom cursor (change the URL below to use your own) */
+  cursor:
+    url("../assets/branding-images/StarCursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -246,6 +229,10 @@ body {
 /* 🖍️ Text Highlight Styles */
 /* This changes the background color when you highlight text (like when you click and drag to select it) */
 /* ------------------------------- */
+
+.bold {
+  font-weight: bold;
+}
 
 ::selection {
   background: var(
@@ -713,6 +700,7 @@ a.dark:hover {
   display: flex;
   flex-direction: column;
 }
+
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
 }
