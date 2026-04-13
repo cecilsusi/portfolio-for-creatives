@@ -695,6 +695,7 @@ a.dark:hover {
 /* -------------------------------------------------------------------------- */
 
 .hero {
+  background-color: var(--color-accent-secondary);
   width: 100%;
   min-height: 80vh; /* Takes up most of the screen height */
   display: flex;
